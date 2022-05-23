@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Test : MonoBehaviour
+public class Test : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    [SerializeField] GameObject gameObject;
+    public GameObject image;
+    public bool isSelect;
     Vector2 mousePosition;
 
     bool Select;
@@ -18,31 +20,45 @@ public class Test : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(isSelect);
     }
 
-    public void OnMouseDrag()
+    public void OnBeginDrag(PointerEventData eventData)
     {
-        Debug.Log("드래그중");
+        image.transform.localScale = new Vector3(2, 4, 2);
+        //throw new System.NotImplementedException();
     }
 
-    //public void OnEnd
+    public void OnDrag(PointerEventData eventData)
+    {
+        image.transform.position = Input.mousePosition;
+        //throw new System.NotImplementedException();
+    }
 
-    //public void Drag()
-    //{
-    //    transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
-    //}
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if (isSelect)
+        {
+            image.transform.localPosition = new Vector3(-100, 0, 0);
+        }
+        else 
+        {
+            image.transform.localPosition = new Vector3(0, -1250, 0);
+            image.transform.localScale = new Vector3(1, 2, 1);
+        }
+        // throw new System.NotImplementedException();
+    }
 
-    //public void Drop()
-    //{
-    //    if (Select)
-    //    {
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hom"))
+            isSelect = true;
+    }
 
-    //    }
-    //    else
-    //    {
-    //        transform.position = new Vector2(-1, -4);
-    //    }
-    //}
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Hom"))
+            isSelect = false;
+    }
 
 }
