@@ -609,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 0}
+  BackSpeed: 0
   isSelect: 0
 --- !u!4 &1097719192
 Transform:
@@ -755,6 +756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 1872190746}
+  BackSpeed: 5
   isSelect: 0
 --- !u!114 &1872190749
 MonoBehaviour:
