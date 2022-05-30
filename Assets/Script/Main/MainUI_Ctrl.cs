@@ -6,7 +6,18 @@ using UnityEngine.UI;
 
 public class MainUI_Ctrl : MonoBehaviour
 {
+    [Header("ÆÇ³Ú")]
     [SerializeField] GameObject Select_Pnl;
+    [Space(10f)]
+
+    [Header("¹öÆ°")]
+    [SerializeField] Button Option_Btn;
+    [SerializeField] Button Animal_Btn;
+    [SerializeField] Button Fruit_Btn;
+    [SerializeField] Button Vegetable_Btn;
+    [SerializeField] Button Vehicle_Btn;
+    [SerializeField] Button Cancel_Btn;
+    
     
     // Start is called before the first frame update
     void Start()
@@ -16,6 +27,11 @@ public class MainUI_Ctrl : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        Btn_Ani();
+    }
+
+    void Btn_Ani()
     {
         
     }
@@ -32,22 +48,22 @@ public class MainUI_Ctrl : MonoBehaviour
     #region
     public void OnClickAni()
     {
-        Select_Pnl.SetActive(true);
+        Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
     }
 
     public void OnClickFruit()
     {
-        Select_Pnl.SetActive(true);
+        Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
     }
 
     public void OnClickVege()
     {
-        Select_Pnl.SetActive(true);
+        Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
     }
 
     public void OnClickVehicle()
     {
-        Select_Pnl.SetActive(true);
+        Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
     }
     #endregion
 
@@ -56,7 +72,7 @@ public class MainUI_Ctrl : MonoBehaviour
 
     public void OnClickCancel()
     {
-        Select_Pnl.SetActive(false);
+        Select_Pnl.transform.DOScale(Vector3.zero, 0.5f);
     }
 
     #endregion
