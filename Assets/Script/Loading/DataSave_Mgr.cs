@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DataSave_Mgr : MonoBehaviour
 {
-    public bool[] SelectMod = new bool[6];
+    public bool[] SelectType = new bool[4];
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +15,9 @@ public class DataSave_Mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //Debug.Assert(SelectType[0] == true);
+        //Debug.Assert(SelectType[1] == true);
+        //Debug.Assert(SelectType[2] == true);
+        //Debug.Assert(SelectType[3] == true);
     }
 }

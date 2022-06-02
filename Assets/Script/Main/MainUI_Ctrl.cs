@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainUI_Ctrl : MonoBehaviour
 {
+    DataSave_Mgr data;
+
     [Header("판넬")]
     [SerializeField] GameObject Select_Pnl;
     [Space(10f)]
@@ -22,16 +25,11 @@ public class MainUI_Ctrl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        data = GameObject.Find("DataSave").GetComponent<DataSave_Mgr>();
     }
 
     // Update is called once per frame
     void Update()
-    {
-        Btn_Ani();
-    }
-
-    void Btn_Ani()
     {
         
     }
@@ -49,30 +47,69 @@ public class MainUI_Ctrl : MonoBehaviour
     public void OnClickAni()
     {
         Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
+        data.SelectType[0] = true;
     }
 
     public void OnClickFruit()
     {
         Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
+        data.SelectType[1] = true;
     }
 
     public void OnClickVege()
     {
         Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
+        data.SelectType[2] = true;
     }
 
     public void OnClickVehicle()
     {
         Select_Pnl.transform.DOScale(Vector3.one, 0.5f);
+        data.SelectType[3] = true;
     }
     #endregion
 
     // 모드 선택 버튼
+    #region
+    public void OnClickMod1()
+    {
+        SceneManager.LoadScene("Mod1Scene");
+    }
 
+    public void OnClickMod2()
+    {
+        SceneManager.LoadScene("Mod2Scene");
+    }
+
+    public void OnClickMod3()
+    {
+        SceneManager.LoadScene("Mod3Scene");
+    }
+
+    public void OnClickMod4()
+    {
+        SceneManager.LoadScene("Mod4Scene");
+    }
+
+    public void OnClickMod5()
+    {
+        SceneManager.LoadScene("Mod5Scene");
+    }
+
+    public void OnClickMod6()
+    {
+        SceneManager.LoadScene("Mod6Scene");
+    }
+    
+    #endregion
 
     public void OnClickCancel()
     {
         Select_Pnl.transform.DOScale(Vector3.zero, 0.5f);
+        data.SelectType[0] = false;
+        data.SelectType[1] = false;
+        data.SelectType[2] = false;
+        data.SelectType[3] = false;
     }
 
     #endregion

@@ -56,10 +56,11 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\InGame\Test.cs" />
-    <Compile Include="Assets\Script\Main\MainUI_Ctrl.cs" />
     <Compile Include="Assets\Script\Loading\Loading_Mgr.cs" />
     <Compile Include="Assets\Script\Loading\DataSave_Mgr.cs" />
+    <Compile Include="Assets\Script\InGame\Test.cs" />
+    <Compile Include="Assets\Script\Main\MainUI_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod1UI_Ctrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

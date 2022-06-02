@@ -7,7 +7,6 @@ using DG.Tweening;
 
 public class Loading_Mgr : MonoBehaviour
 {
-    [SerializeField] Text Loading_Txt;
     bool s = true;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,7 @@ public class Loading_Mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Loading_Txt.text = "";
+        
     }
 
     void GoMain()
