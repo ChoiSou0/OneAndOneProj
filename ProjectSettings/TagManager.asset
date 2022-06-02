@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pzl1_Select
+  - Pzl2_Select
+  - Pzl3_Select
   layers:
   - Default
   - TransparentFX
