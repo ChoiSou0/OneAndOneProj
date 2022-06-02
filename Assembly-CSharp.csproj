@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Script\InGame\Test.cs" />
     <Compile Include="Assets\Script\Main\MainUI_Ctrl.cs" />
+    <Compile Include="Assets\Script\Loading\Loading_Mgr.cs" />
+    <Compile Include="Assets\Script\Loading\DataSave_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
