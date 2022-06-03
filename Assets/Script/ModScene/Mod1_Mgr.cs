@@ -50,9 +50,9 @@ public class Mod1_Mgr : MonoBehaviour
         if (start[0] == false)
         {
             start[0] = true;
-            Puzzle1[0].transform.DOMove(new Vector3(960, 115, 0), 1f);
-            Puzzle1[1].transform.DOMove(new Vector3(460, 115, 0), 1f);
-            Puzzle1[2].transform.DOMove(new Vector3(1460, 115, 0), 1f);
+            Puzzle1[0].transform.DOMove(new Vector3(960, 115, 0), 1f).SetEase(Ease.Linear);
+            Puzzle1[1].transform.DOMove(new Vector3(460, 115, 0), 1f).SetEase(Ease.Linear);
+            Puzzle1[2].transform.DOMove(new Vector3(1460, 115, 0), 1f).SetEase(Ease.Linear);
 
             Puzzle2[0].transform.DOMove(new Vector3(460, 640, 0), 1f).SetEase(Ease.Linear);
             Puzzle2[1].transform.DOMove(new Vector3(960, 640, 0), 1f).SetEase(Ease.Linear);

@@ -50,6 +50,7 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         }
         else
         {
+
             transform.localPosition = new Vector3(0, -425, 0);
             transform.localScale = new Vector3(2, 2, 2);
         }

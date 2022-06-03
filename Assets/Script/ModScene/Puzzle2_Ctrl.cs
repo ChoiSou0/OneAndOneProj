@@ -27,17 +27,36 @@ public class Puzzle2_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
+        transform.localScale = new Vector3(5, 5, 5);
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        if (isSelect)
+        {
 
+        }
+        else
+        {
+            
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pzl2_Select"))
+            isSelect = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pzl2_Select"))
+            isSelect= false;
     }
 
 
