@@ -11,7 +11,7 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     [SerializeField] private GameObject Peace;
     [SerializeField] private Sprite fin;
     private Mod1_Mgr mod1_Mgr;
-    private bool isSelect;
+    [SerializeField] bool isSelect;
     public bool Compelete;
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     {
         if (isSelect)
         {
-            transform.localPosition = new Vector3(0, 500, 0);
+            transform.localPosition = new Vector3(-500, 100, 0);
             mod1_Mgr.Clear_Cnt++;
             this.gameObject.SetActive(false);
             Peace.SetActive(false);
@@ -50,7 +50,7 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         }
         else
         {
-            transform.localPosition = new Vector3(-400, -1250, 0);
+            transform.localPosition = new Vector3(0, -425, 0);
             transform.localScale = new Vector3(2, 2, 2);
         }
     }

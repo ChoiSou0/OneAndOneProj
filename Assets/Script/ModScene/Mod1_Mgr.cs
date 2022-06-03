@@ -11,6 +11,7 @@ public class Mod1_Mgr : MonoBehaviour
     public List<GameObject> Puzzle2 = new List<GameObject>();
     public int Clear_Cnt = 0;
     public int stage = 1;
+    public bool[] start = new bool[3] { false, false, false };
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +25,7 @@ public class Mod1_Mgr : MonoBehaviour
         switch(stage)
         {
             case 1:
-                Stage1(true);
+                Stage1();
                 break;
 
             case 2:
@@ -44,15 +45,18 @@ public class Mod1_Mgr : MonoBehaviour
 
     }
 
-    public void Stage1(bool start)
+    public void Stage1()
     {
-        if (start == true)
+        if (start[0] == false)
         {
-            start = false;
-            Puzzle2[0].transform.DOMove(new Vector3(720, 2000, 0), 1f).SetEase(Ease.Linear).SetEase(Ease.OutBounce);
-            Puzzle2[1].transform.DOMove(new Vector3(360, 1000, 0), 1f).SetEase(Ease.Linear).SetEase(Ease.OutBounce);
-            Puzzle2[2].transform.DOMove(new Vector3(1080, 1000, 0), 1f).SetEase(Ease.Linear).SetEase(Ease.OutBounce);
+            start[0] = true;
+            Puzzle1[0].transform.DOMove(new Vector3(960, 115, 0), 1f);
+            Puzzle1[1].transform.DOMove(new Vector3(460, 115, 0), 1f);
+            Puzzle1[2].transform.DOMove(new Vector3(1460, 115, 0), 1f);
 
+            Puzzle2[0].transform.DOMove(new Vector3(460, 640, 0), 1f).SetEase(Ease.Linear);
+            Puzzle2[1].transform.DOMove(new Vector3(960, 640, 0), 1f).SetEase(Ease.Linear);
+            Puzzle2[2].transform.DOMove(new Vector3(1460, 640, 0), 1f).SetEase(Ease.Linear);
         }
     }
 
