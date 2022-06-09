@@ -32,6 +32,10 @@ public class Puzzle2_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
+<<<<<<< HEAD
+        if (!Compelete)
+            transform.position = Input.mousePosition;
+=======
         if (isSelect)
         {
 
@@ -40,11 +44,37 @@ public class Puzzle2_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
         {
             
         }
+>>>>>>> origin/main
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        if (isSelect)
+        {
+            transform.localPosition = new Vector3(0, 100, 0);
+            mod1_Mgr.Clear_Cnt++;
+            this.gameObject.SetActive(false);
+            Peace.SetActive(false);
+            Pic.color = new Color(1, 1, 1, 1);
+            Pic.sprite = fin;
+        }
+        else
+        {
+            transform.localPosition = new Vector3(-500, -425, 0);
+            transform.localScale = new Vector3(2, 2, 2);
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pzl2_Select"))
+            isSelect = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Pzl2_Select"))
+            isSelect = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
