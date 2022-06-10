@@ -20,8 +20,8 @@ public class MainUI_Ctrl : MonoBehaviour
     [SerializeField] Button Vegetable_Btn;
     [SerializeField] Button Vehicle_Btn;
     [SerializeField] Button Cancel_Btn;
-    
-    
+
+
     // Start is called before the first frame update
     void Start()
     {
