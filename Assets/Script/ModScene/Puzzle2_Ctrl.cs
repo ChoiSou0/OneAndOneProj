@@ -28,14 +28,20 @@ public class Puzzle2_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
     public void OnBeginDrag(PointerEventData eventData)
     {
         transform.localScale = new Vector3(5, 5, 5);
-        transform.SetAsLastSibling();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-
         if (!Compelete)
             transform.position = Input.mousePosition;
+        if (isSelect)
+        {
+
+        }
+        else
+        {
+            
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
