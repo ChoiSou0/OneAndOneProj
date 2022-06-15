@@ -509,6 +509,10 @@ MonoBehaviour:
   - {fileID: 1142163754}
   - {fileID: 1870039916}
   - {fileID: 1179116858}
+  Puzzle3:
+  - {fileID: 1645907895}
+  - {fileID: 875937302}
+  - {fileID: 178604742}
   Clear_Cnt: 0
   stage: 1
   start: 000000
