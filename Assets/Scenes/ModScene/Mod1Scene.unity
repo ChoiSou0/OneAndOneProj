@@ -513,6 +513,30 @@ MonoBehaviour:
   - {fileID: 1645907895}
   - {fileID: 875937302}
   - {fileID: 178604742}
+  Img:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SelPiece:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SetPiece:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  ImgSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SelPieceSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  SetPieceSprite:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   Clear_Cnt: 0
   stage: 1
   start: 000000
