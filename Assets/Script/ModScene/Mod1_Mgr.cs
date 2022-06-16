@@ -45,6 +45,9 @@ public class Mod1_Mgr : MonoBehaviour
             case 3:
                 Stage3();
                 break;
+            case 4:
+                Ending();
+                break;
         }
 
         if (Clear_Cnt == 3)
@@ -83,6 +86,11 @@ public class Mod1_Mgr : MonoBehaviour
 
             SetSetting();
         }
+    }
+
+    public void Ending()
+    {
+
     }
 
     private void SetSetting()
