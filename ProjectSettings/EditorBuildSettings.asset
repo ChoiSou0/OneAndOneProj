@@ -24,9 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ModScene/Mod4Scene.unity
     guid: edb4e75e70ae887409176eb14a469996
   - enabled: 1
-    path: Assets/Scenes/ModScene/Mod5Scene.unity
-    guid: a36126e67412716499259a3a8cc7c050
-  - enabled: 1
-    path: Assets/Scenes/ModScene/Mod6Scene.unity
-    guid: 2aba9927f3f9d6b41be2ad9623e37dba
+    path: Assets/Scenes/EndingScene.unity
+    guid: 9f4e712d463fc87498727a9cff48fc54
   m_configObjects: {}

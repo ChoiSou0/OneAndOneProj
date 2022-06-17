@@ -64,6 +64,7 @@
     <Compile Include="Assets\Script\ModScene\Mod1_Mgr.cs" />
     <Compile Include="Assets\Script\ModScene\Puzzle1_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Puzzle3_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Ending_Ctrl.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

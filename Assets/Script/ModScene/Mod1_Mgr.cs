@@ -90,7 +90,7 @@ public class Mod1_Mgr : MonoBehaviour
 
     public void Ending()
     {
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingScene");
     }
 
     private void SetSetting()
@@ -122,4 +122,10 @@ public class Mod1_Mgr : MonoBehaviour
         Puzzle2[1].transform.DOLocalMove(new Vector3(0, 100, 0), 1f).SetEase(Ease.Linear);
         Puzzle2[2].transform.DOLocalMove(new Vector3(500, 100, 0), 1f).SetEase(Ease.Linear);
     }
+
+    public void OnClickBack()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+    }
+
 }
