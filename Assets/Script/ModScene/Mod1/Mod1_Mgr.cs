@@ -15,9 +15,9 @@ public class Mod1_Mgr : MonoBehaviour
     public List<Image> SelPiece = new List<Image>();
     public List<Image> SetPiece = new List<Image>();
 
-    public List<Image> ImgSprite = new List<Image>();
-    public List<Image> SelPieceSprite = new List<Image>();
-    public List<Image> SetPieceSprite = new List<Image>();
+    public List<Sprite> ImgSprite = new List<Sprite>();
+    public List<Sprite> SelPieceSprite = new List<Sprite>();
+    public List<Sprite> SetPieceSprite = new List<Sprite>();
 
     public int Clear_Cnt = 0;
     public int stage = 1;
@@ -64,6 +64,13 @@ public class Mod1_Mgr : MonoBehaviour
         {
             start[0] = true;
 
+            for(int i = 0; i < 3; i++)
+            {
+                Img[0].sprite = ImgSprite[0];
+                SelPiece[0].sprite = SelPieceSprite[0];
+                SetPiece[0].sprite = SetPieceSprite[0];
+            }
+
             SetSetting();
         }
     }
@@ -73,6 +80,8 @@ public class Mod1_Mgr : MonoBehaviour
         if (start[1] == false)
         {
             start[1] = true;
+
+            
 
             SetSetting();
         }
@@ -95,17 +104,13 @@ public class Mod1_Mgr : MonoBehaviour
 
     private void SetSetting()
     {
-        Puzzle1[0].SetActive(true);
-        Puzzle1[1].SetActive(true);
-        Puzzle1[2].SetActive(true);
-
-        Puzzle3[0].SetActive(true);
-        Puzzle3[1].SetActive(true);
-        Puzzle3[2].SetActive(true);
-
-        Puzzle1[0].transform.localScale = new Vector3(2, 2, 2);
-        Puzzle1[1].transform.localScale = new Vector3(2, 2, 2);
-        Puzzle1[2].transform.localScale = new Vector3(2, 2, 2);
+        for (int i = 0; i < 3; i++)
+        {
+            Puzzle1[i].SetActive(true);
+            Img[i].color = new Color(1, 1, 1, 0.5f);
+            Puzzle3[i].SetActive(true);
+            Puzzle1[i].transform.localScale = new Vector3(2, 2, 2);
+        }
 
         Puzzle1[0].transform.localPosition = new Vector3(2000, -425, 0);
         Puzzle1[1].transform.localPosition = new Vector3(1500, -425, 0);

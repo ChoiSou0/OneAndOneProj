@@ -38,7 +38,16 @@ public class Piece1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-
+        if (isSelect)
+        {
+            //transform.localPosition = new Vector3();
+            
+        }
+        else
+        {
+            transform.localPosition = new Vector3(-500, -410, 0);
+            transform.localScale = new Vector3(2, 2, 2);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
