@@ -18,9 +18,8 @@ public class Mod2_Mgr : MonoBehaviour
     public List<Sprite> SelPieceSprite = new List<Sprite>();
     public List<Sprite> SetPieceSprite = new List<Sprite>();
 
-    public int Clear_Cnt = 0;
+    public int Plz;
     public int stage = 1;
-    public int Plz_Chs;
     public bool[] start = new bool[3] { false, false, false };
 
     // Start is called before the first frame update
@@ -44,7 +43,7 @@ public class Mod2_Mgr : MonoBehaviour
                 Stage3();
                 break;
             case 4:
-                UnityEngine.SceneManagement.SceneManager.LoadScene("EndingScene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndScene");
                 break;
         }
     }
@@ -54,7 +53,6 @@ public class Mod2_Mgr : MonoBehaviour
         if (start[0] == false)
         {
             start[0] = true;
-            Plz_Chs = Random.Range(1, 4);
 
             SetSetting();
         }
@@ -65,7 +63,6 @@ public class Mod2_Mgr : MonoBehaviour
         if (start[1] == false)
         {
             start[1] = true;
-            Plz_Chs = Random.Range(1, 4);
 
             SetSetting();
         }
@@ -76,7 +73,6 @@ public class Mod2_Mgr : MonoBehaviour
         if (start[2] == false)
         {
             start[2] = true;
-            Plz_Chs = Random.Range(1, 4);
 
             SetSetting();
         }
@@ -84,10 +80,6 @@ public class Mod2_Mgr : MonoBehaviour
 
     public void SetSetting()
     {
-        Img[0].transform.localScale = new Vector3(2, 2, 2);
-        Img[1].transform.localScale = new Vector3(2, 2, 2);
-        Img[2].transform.localScale = new Vector3(2, 2, 2);
-
         Img[0].transform.localPosition = new Vector3(1000, -410, 0);
         Img[1].transform.localPosition = new Vector3(1500, -410, 0);
         Img[2].transform.localPosition = new Vector3(2000, -410, 0);
