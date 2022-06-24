@@ -63,13 +63,13 @@
     <Compile Include="Assets\Script\Main\MainUI_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Ending_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Mod1\Puzzle2_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Mod3_Mgr.cs" />
     <Compile Include="Assets\Script\Loading\DataSave_Mgr.cs" />
     <Compile Include="Assets\Script\ModScene\Mod1\Mod1_Mgr.cs" />
     <Compile Include="Assets\Script\ModScene\Mod2\Piece1_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Mod1\Puzzle1_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Mod1\Puzzle3_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Mod2\Mod2_Mgr.cs" />
-    <Compile Include="Assets\Script\ModScene\Mod3\Mod3_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
