@@ -11,6 +11,7 @@ public class MainUI_Ctrl : MonoBehaviour
 
     [Header("판넬")]
     [SerializeField] GameObject Select_Pnl;
+    [SerializeField] GameObject Option_Pnl;
     [Space(10f)]
 
     [Header("버튼")]
@@ -39,7 +40,12 @@ public class MainUI_Ctrl : MonoBehaviour
     // 옵션 버튼 클릭
     public void OnClickOption()
     {
+        Option_Pnl.transform.DOLocalMove(new Vector2(0, 0), 1f).SetEase(Ease.Linear).SetEase(Ease.OutBounce);
+    }
 
+    public void OnClickOptionCancel()
+    {
+        Option_Pnl.transform.DOLocalMove(new Vector2(0, 1000), 0.5f).SetEase(Ease.Linear);
     }
 
     // 주제 선택 버튼

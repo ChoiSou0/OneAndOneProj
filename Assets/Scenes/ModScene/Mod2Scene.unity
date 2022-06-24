@@ -324,10 +324,10 @@ Canvas:
   m_GameObject: {fileID: 132778782}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -721,9 +721,8 @@ MonoBehaviour:
   ImgSprite: []
   SelPieceSprite: []
   SetPieceSprite: []
-  Plz: 0
-  stage: 1
   Plz_Chs: 0
+  stage: 1
   start: 000000
 --- !u!1 &1124768834
 GameObject:

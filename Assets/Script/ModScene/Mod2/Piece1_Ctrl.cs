@@ -12,17 +12,21 @@ public class Piece1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
     [SerializeField] private Sprite fin;
     private Mod2_Mgr mod2_Mgr;
     [SerializeField] bool isSelect;
+    RectTransform rect;
+    private RectTransform canvas;
 
     // Start is called before the first frame update
     void Start()
     {
         mod2_Mgr = GameObject.Find("Mod2UI_Mgr").GetComponent<Mod2_Mgr>();
+        rect = GetComponent<RectTransform>();
+        canvas = GameObject.Find("Canvas").GetComponent<RectTransform>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -33,7 +37,12 @@ public class Piece1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnDrag(PointerEventData evenData)
     {
-        transform.position = Input.mousePosition;
+        //rectTransform.anchoredPosition = Input.mousePosition;
+        Vector2 viewportPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+        Vector2 worldObjPos = new Vector2(
+            (viewportPos.x * canvas.sizeDelta.x) - (canvas.sizeDelta.x * 0.5f),
+            (viewportPos.y * canvas.sizeDelta.y) - (canvas.sizeDelta.y * 0.5f));
+        this.rect.anchoredPosition = worldObjPos;
     }
 
     public void OnEndDrag(PointerEventData eventData)

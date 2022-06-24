@@ -18,7 +18,7 @@ public class Mod2_Mgr : MonoBehaviour
     public List<Sprite> SelPieceSprite = new List<Sprite>();
     public List<Sprite> SetPieceSprite = new List<Sprite>();
 
-    public int Plz;
+    public int Plz_Chs;
     public int stage = 1;
     public bool[] start = new bool[3] { false, false, false };
 
