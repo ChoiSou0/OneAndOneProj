@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ModScene/Mod2Scene.unity
+- path: Assets/Scenes/ModScene/Mod1Scene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

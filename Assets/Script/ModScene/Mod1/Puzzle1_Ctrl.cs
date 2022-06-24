@@ -34,8 +34,9 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        //transform.localPosition = Camera.main.ScreenToViewportPoint(eventData.position);
     }
+
 
     public void OnEndDrag(PointerEventData eventData)
     {

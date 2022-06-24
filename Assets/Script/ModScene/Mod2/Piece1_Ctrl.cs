@@ -38,10 +38,9 @@ public class Piece1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndD
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (isSelect)
+        if (isSelect && mod2_Mgr.Plz_Chs == 1)
         {
-            //transform.localPosition = new Vector3();
-            
+            mod2_Mgr.stage++;
         }
         else
         {
