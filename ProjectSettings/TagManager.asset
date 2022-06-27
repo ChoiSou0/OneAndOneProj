@@ -8,6 +8,13 @@ TagManager:
   - Pzl2_Select
   - Pzl3_Select
   - Puzzle
+  - Pzl1
+  - Pzl2
+  - Pzl3
+  - Pzl4
+  - Puzzle1
+  - Puzzle2
+  - Puzzle3
   layers:
   - Default
   - TransparentFX
