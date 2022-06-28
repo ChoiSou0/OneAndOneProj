@@ -53,7 +53,7 @@
     <UnityVersion>2021.3.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Loading\Loading_Mgr.cs" />
@@ -78,6 +78,7 @@
     <Compile Include="Assets\Script\ModScene\Mod1\Puzzle3_Ctrl.cs" />
     <Compile Include="Assets\Script\ModScene\Mod4\Piece_Ctrl3.cs" />
     <Compile Include="Assets\Script\ModScene\Mod2\Mod2_Mgr.cs" />
+    <Compile Include="Assets\Script\Main\Audio_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

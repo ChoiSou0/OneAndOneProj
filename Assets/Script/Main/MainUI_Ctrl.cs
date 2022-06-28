@@ -21,8 +21,7 @@ public class MainUI_Ctrl : MonoBehaviour
     [SerializeField] Button Vegetable_Btn;
     [SerializeField] Button Vehicle_Btn;
     [SerializeField] Button Cancel_Btn;
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +36,17 @@ public class MainUI_Ctrl : MonoBehaviour
 
     // 버튼 클릭
     #region
+    //나가기 버튼
+    public void OnClickExit()
+    {
+        Application.Quit();
+    }
+    //크레딧 버튼
+    public void OnClickCredit()
+    {
+
+    }
+
     // 옵션 버튼 클릭
     public void OnClickOption()
     {
