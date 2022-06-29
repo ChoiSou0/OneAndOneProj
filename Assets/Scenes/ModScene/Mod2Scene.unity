@@ -709,7 +709,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e477a97e1a41742a570d7c4634966e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Puzzle1: []
+  Puzzle1:
+  - {fileID: 1316750296}
+  - {fileID: 732991318}
+  - {fileID: 1828551457}
   Puzzle2: []
   Puzzle3: []
   Img:

@@ -567,7 +567,11 @@ MonoBehaviour:
   - {fileID: 979966971}
   SelPiece: []
   SetPiece: []
-  ImgSprite: []
+  ImgSprite:
+  - {fileID: 21300000, guid: 81edd8281fbd193408614856a1448429, type: 3}
+  - {fileID: 21300000, guid: 3c68db024f93cec4b8bd4c45d4658180, type: 3}
+  - {fileID: 21300000, guid: b6ce1905a3241a34e81b3ab2797ea488, type: 3}
+  - {fileID: 21300000, guid: 130f8742949fe5d4f85b80525f4e78a8, type: 3}
   SelPieceSprite: []
   SetPieceSprite: []
   Clear_Cnt: 0
@@ -1066,7 +1070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 78411981, guid: 130f8742949fe5d4f85b80525f4e78a8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1458,7 +1462,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1039235917, guid: 3c68db024f93cec4b8bd4c45d4658180, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

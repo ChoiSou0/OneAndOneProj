@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class MainUI_Ctrl : MonoBehaviour
 {
     DataSave_Mgr data;
+    AudioSource audio;
 
     [Header("ÆÇ³Ú")]
     [SerializeField] GameObject Select_Pnl;
@@ -22,10 +23,25 @@ public class MainUI_Ctrl : MonoBehaviour
     [SerializeField] Button Vehicle_Btn;
     [SerializeField] Button Cancel_Btn;
 
+    Toggle Mute_Tog;
+    Scrollbar SoundBar;
+
+    private void Awake()
+    {
+        data = GameObject.Find("DataSave").GetComponent<DataSave_Mgr>();
+        audio = GameObject.Find("Audio_Mgr").GetComponent<AudioSource>();
+        Mute_Tog = GameObject.Find("Mute_Tog").GetComponent<Toggle>();
+        SoundBar = GameObject.Find("BGM_Sbar").GetComponent<Scrollbar>();
+
+        SoundBar.value = audio.volume;
+        Mute_Tog.isOn = audio.mute;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        data = GameObject.Find("DataSave").GetComponent<DataSave_Mgr>();
+        for (int i = 0; i < 4; i++)
+            data.SelectType[i] = false;
     }
 
     // Update is called once per frame

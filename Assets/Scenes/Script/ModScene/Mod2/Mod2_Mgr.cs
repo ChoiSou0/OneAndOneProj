@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.UI;
 
-
-public class Mod1_Mgr : MonoBehaviour
+public class Mod2_Mgr : MonoBehaviour
 {
     public List<GameObject> Puzzle1 = new List<GameObject>();
     public List<GameObject> Puzzle2 = new List<GameObject>();
@@ -19,7 +18,7 @@ public class Mod1_Mgr : MonoBehaviour
     public List<Sprite> SelPieceSprite = new List<Sprite>();
     public List<Sprite> SetPieceSprite = new List<Sprite>();
 
-    public int Clear_Cnt = 0;
+    public int Plz_Chs;
     public int stage = 1;
     public bool[] start = new bool[3] { false, false, false };
 
@@ -32,30 +31,21 @@ public class Mod1_Mgr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(stage)
+        switch (stage)
         {
             case 1:
                 Stage1();
                 break;
-
             case 2:
                 Stage2();
                 break;
-
             case 3:
                 Stage3();
                 break;
             case 4:
-                Ending();
+                UnityEngine.SceneManagement.SceneManager.LoadScene("EndingScene");
                 break;
         }
-
-        if (Clear_Cnt == 3)
-        {
-            Clear_Cnt = 0;
-            stage++;
-        }
-
     }
 
     public void Stage1()
@@ -63,13 +53,6 @@ public class Mod1_Mgr : MonoBehaviour
         if (start[0] == false)
         {
             start[0] = true;
-
-            for(int i = 0; i < 3; i++)
-            {
-                Img[0].sprite = ImgSprite[0];
-                SelPiece[0].sprite = SelPieceSprite[0];
-                SetPiece[0].sprite = SetPieceSprite[0];
-            }
 
             SetSetting();
         }
@@ -80,8 +63,6 @@ public class Mod1_Mgr : MonoBehaviour
         if (start[1] == false)
         {
             start[1] = true;
-
-            
 
             SetSetting();
         }
@@ -97,40 +78,24 @@ public class Mod1_Mgr : MonoBehaviour
         }
     }
 
-    public void Ending()
-    {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("EndingScene");
-    }
-
-    private void SetSetting()
+    public void SetSetting()
     {
         for (int i = 0; i < 3; i++)
-        {
-            Puzzle1[i].SetActive(true);
-            Img[i].color = new Color(1, 1, 1, 0.5f);
-            Puzzle3[i].SetActive(true);
             Puzzle1[i].transform.localScale = new Vector3(2, 2, 2);
-        }
 
-        Puzzle1[0].transform.localPosition = new Vector3(2000, -425, 0);
-        Puzzle1[1].transform.localPosition = new Vector3(1500, -425, 0);
-        Puzzle1[2].transform.localPosition = new Vector3(2500, -425, 0);
+        Img[0].transform.localPosition = new Vector3(1000, -410, 0);
+        Img[1].transform.localPosition = new Vector3(1500, -410, 0);
+        Img[2].transform.localPosition = new Vector3(2000, -410, 0);
 
-        Puzzle2[0].transform.localPosition = new Vector3(-1500, 100, 0);
-        Puzzle2[1].transform.localPosition = new Vector3(0, 1000, 0);
-        Puzzle2[2].transform.localPosition = new Vector3(1500, 100, 0);
+        Img[0].transform.DOLocalMove(new Vector3(-500, -410, 0), 1f);
+        Img[1].transform.DOLocalMove(new Vector3(0, -410, 0), 1f);
+        Img[2].transform.DOLocalMove(new Vector3(500, -410, 0), 1f);
 
-        Puzzle1[0].transform.DOLocalMove(new Vector3(0, -425, 0), 1f).SetEase(Ease.Linear);
-        Puzzle1[1].transform.DOLocalMove(new Vector3(-500, -425, 0), 1f).SetEase(Ease.Linear);
-        Puzzle1[2].transform.DOLocalMove(new Vector3(500, -425, 0), 1f).SetEase(Ease.Linear);
-        Puzzle2[0].transform.DOLocalMove(new Vector3(-500, 100, 0), 1f).SetEase(Ease.Linear);
-        Puzzle2[1].transform.DOLocalMove(new Vector3(0, 100, 0), 1f).SetEase(Ease.Linear);
-        Puzzle2[2].transform.DOLocalMove(new Vector3(500, 100, 0), 1f).SetEase(Ease.Linear);
+        Plz_Chs = Random.Range(1, 4);
     }
 
     public void OnClickBack()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
     }
-
 }

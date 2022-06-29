@@ -5,11 +5,11 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class Puzzle3_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] private Image Pic;
     [SerializeField] private GameObject Peace;
-    [SerializeField] private Sprite fin;
+    [SerializeField] private List<Sprite> fin = new List<Sprite>();
     private Mod1_Mgr mod1_Mgr;
     private RectTransform rect;
     private RectTransform canvas;
@@ -38,46 +38,55 @@ public class Puzzle1_Ctrl : MonoBehaviour, IDragHandler, IBeginDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
-        //transform.localPosition = Camera.main.ScreenToViewportPoint(eventData.position);
+        //transform.position = Input.mousePosition;
         Vector2 viewportPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         Vector2 worldObjPos = new Vector2(
             (viewportPos.x * canvas.sizeDelta.x) - (canvas.sizeDelta.x * 0.5f),
             (viewportPos.y * canvas.sizeDelta.y) - (canvas.sizeDelta.y * 0.5f));
         this.rect.anchoredPosition = worldObjPos;
-
-        //Debug.Log("viewport: " + viewportPos.ToString() + ", worldobj: " + worldObjPos.ToString());
     }
-
 
     public void OnEndDrag(PointerEventData eventData)
     {
         if (isSelect)
         {
-            transform.localPosition = new Vector3(-500, 100, 0);
+            transform.localPosition = new Vector3(500, 100, 0);
             mod1_Mgr.Clear_Cnt++;
             this.gameObject.SetActive(false);
             Peace.SetActive(false);
             Pic.color = new Color(1, 1, 1, 1);
-            Pic.sprite = fin;
+
+            switch (mod1_Mgr.stage)
+            {
+                case 1:
+                    Pic.sprite = fin[0];
+                    break;
+                case 2:
+                    Pic.sprite = fin[1];
+                    break;
+                case 3:
+                    Pic.sprite = fin[2];
+                    break;
+            }
         }
         else
         {
-
-            transform.localPosition = new Vector3(0, -425, 0);
+            transform.localPosition = new Vector3(500, -425, 0);
             transform.localScale = new Vector3(2, 2, 2);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Pzl1_Select"))
+        if (collision.CompareTag("Pzl3_Select"))
             isSelect = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Pzl1_Select"))
+        if (collision.CompareTag("Pzl3_Select"))
             isSelect = false;
     }
+
 
 }
