@@ -7,6 +7,8 @@ using DG.Tweening;
 
 public class Mod1_Mgr : MonoBehaviour
 {
+    private DataSave_Mgr data;
+
     public List<GameObject> Puzzle1 = new List<GameObject>();
     public List<GameObject> Puzzle2 = new List<GameObject>();
     public List<GameObject> Puzzle3 = new List<GameObject>();

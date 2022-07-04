@@ -53,32 +53,32 @@
     <UnityVersion>2021.3.1f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Script\Main\Audio_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\Loading\Loading_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod3\Piece2.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod2\Piece3_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod2\Piece2_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\InGame\Test.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod3\Piece1.cs" />
-    <Compile Include="Assets\Scenes\Script\Main\MainUI_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod3\Piece3.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Ending_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod4\Piece_Ctrl1.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod4\Mod4_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod3\Piece4.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod1\Puzzle2_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod3\Mod3_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod4\Piece_Ctrl2.cs" />
-    <Compile Include="Assets\Scenes\Script\Loading\DataSave_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod1\Mod1_Mgr.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod2\Piece1_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod1\Puzzle1_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod1\Puzzle3_Ctrl.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod4\Piece_Ctrl3.cs" />
-    <Compile Include="Assets\Scenes\Script\ModScene\Mod2\Mod2_Mgr.cs" />
+    <Compile Include="Assets\Script\Main\Audio_Mgr.cs" />
+    <Compile Include="Assets\Script\Loading\Loading_Mgr.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Piece2.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod2\Piece3_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod2\Piece2_Ctrl.cs" />
+    <Compile Include="Assets\Script\InGame\Test.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Piece1.cs" />
+    <Compile Include="Assets\Script\Main\MainUI_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Piece3.cs" />
+    <Compile Include="Assets\Script\ModScene\Ending_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod4\Piece_Ctrl1.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod4\Mod4_Mgr.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Piece4.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod1\Puzzle2_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod3\Mod3_Mgr.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod4\Piece_Ctrl2.cs" />
+    <Compile Include="Assets\Script\Loading\DataSave_Mgr.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod1\Mod1_Mgr.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod2\Piece1_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod1\Puzzle1_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod1\Puzzle3_Ctrl.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod4\Piece_Ctrl3.cs" />
+    <Compile Include="Assets\Script\ModScene\Mod2\Mod2_Mgr.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -734,6 +734,9 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
