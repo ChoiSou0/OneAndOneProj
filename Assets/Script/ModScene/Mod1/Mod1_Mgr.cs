@@ -29,7 +29,7 @@ public class Mod1_Mgr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        data = GameObject.Find("DataSave").GetComponent<DataSave_Mgr>();
     }
 
     // Update is called once per frame
@@ -67,11 +67,14 @@ public class Mod1_Mgr : MonoBehaviour
         {
             start[0] = true;
 
-            for(int i = 0; i < 2; i++)
+            if (data.SelectType[0])
             {
-                Img[i].sprite = ImgSprite[i];
-                SelPiece[i].sprite = SelPieceSprite[i];
-                SetPiece[i].sprite = SetPieceSprite[i];
+                for (int i = 0; i < 2; i++)
+                {
+                    Img[i].sprite = ImgSprite[i];
+                    SelPiece[i].sprite = SelPieceSprite[i];
+                    SetPiece[i].sprite = SetPieceSprite[i];
+                }
             }
 
             SetSetting();
@@ -84,11 +87,14 @@ public class Mod1_Mgr : MonoBehaviour
         {
             start[1] = true;
 
-            for (int i = 0; i < 3; i++)
+            if (data.SelectType[0])
             {
-                Img[i].sprite = ImgSprite[i + 3];
-                SelPiece[i].sprite = SelPieceSprite[i + 3];
-                SetPiece[i].sprite = SetPieceSprite[i + 3];
+                for (int i = 0; i < 3; i++)
+                {
+                    Img[i].sprite = ImgSprite[i + 3];
+                    SelPiece[i].sprite = SelPieceSprite[i + 3];
+                    SetPiece[i].sprite = SetPieceSprite[i + 3];
+                }
             }
 
             SetSetting();
@@ -101,11 +107,14 @@ public class Mod1_Mgr : MonoBehaviour
         {
             start[2] = true;
 
-            for (int i = 0; i < 3; i++)
+            if (data.SelectType[0])
             {
-                Img[i].sprite = ImgSprite[i + 6];
-                SelPiece[i].sprite = SelPieceSprite[i + 6];
-                SetPiece[i].sprite = SetPieceSprite[i + 6];
+                for (int i = 0; i < 3; i++)
+                {
+                    Img[i].sprite = ImgSprite[i + 6];
+                    SelPiece[i].sprite = SelPieceSprite[i + 6];
+                    SetPiece[i].sprite = SetPieceSprite[i + 6];
+                }
             }
 
             SetSetting();

@@ -82,3 +82,11 @@ The following packages were removed:
   com.unity.2d.sprite@1.0.0
   com.unity.2d.spriteshape@7.0.4
   com.unity.2d.tilemap@1.0.0
+
+=== Tue Jul  5 08:38:17 2022
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were removed:
+  com.unity.2d.sprite@1.0.0
